@@ -7,8 +7,8 @@ router.get('/', function(req, res, next) {            //此路径渲染index文�
 });
 
 /* Get login page */
-router.route("/login").get(function(req,res) {          //此路径渲染login文件，login.html
-    res.render("login", { title: 'User login'});
+router.route('/login').get(function(req,res) {          //此路径渲染login文件，login.html
+    res.render('login', { title: 'User login'});
 }).post(function(req, res) {                               //进行post数据的处理操作
     var User = global.dbHandel.getModel('user');
     var uname = req.body.uname;                           //获取post上来的data数据中uname的值
@@ -36,8 +36,8 @@ router.route("/login").get(function(req,res) {          //此路径渲染login�
 });
 
 /* Get register page */
-router.route("/register").get(function(req,res) {              //此路径则渲染register文件，register.html 
-    res.render("register", { title: 'User register'});
+router.route('/register').get(function(req,res) {              //此路径则渲染register文件，register.html 
+    res.render('register', { title: 'User register'});
 }).post(function(req, res) {
     var User = global.dbHandel.getModel('user');
     var uname = req.body.uname;
